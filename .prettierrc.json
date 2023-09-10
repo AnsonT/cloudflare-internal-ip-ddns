@@ -1,0 +1,14 @@
+{ 
+  "semi": false,
+  "singleQuote": true,
+  "overrides": [
+    {
+      "files": [
+        "**/*package.json"
+      ],
+      "options": {
+        "trailingComma": "none"
+      }
+    }
+  ]
+}

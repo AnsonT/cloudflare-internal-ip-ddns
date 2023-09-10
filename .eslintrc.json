@@ -1,0 +1,59 @@
+{
+  "env": {
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "prettier"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "project": [
+          "./tsconfig.json"
+        ]
+      },
+      "settings": {
+      },
+      "extends": [
+        "standard-with-typescript",
+        "prettier"
+      ],
+      "rules": {
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/method-signature-style": "off",
+        "@typescript-eslint/naming-convention": "off",
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "@typescript-eslint/restrict-template-expressions": "off",
+        "@typescript-eslint/strict-boolean-expressions": "off",
+        "semi": "error",
+        "quotes": ["error", "single"]
+      }
+    },
+    {
+      "files": [
+        "*.test.ts",
+        "*.test.js"
+      ],
+      "extends": [
+        "plugin:jest/recommended"
+      ],
+      "env": {
+        "jest": true
+      }
+    }
+  ],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": "latest",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "root": true
+}
